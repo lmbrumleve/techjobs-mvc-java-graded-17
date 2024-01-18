@@ -32,6 +32,7 @@ public class ListController {
         tableChoices.put("location", JobData.getAllLocations());
         tableChoices.put("positionType", JobData.getAllPositionTypes());
         tableChoices.put("coreCompetency", JobData.getAllCoreCompetency());
+        tableChoices.put("all", "View All");
     }
 
     @GetMapping(value = "")
@@ -57,7 +58,7 @@ public class ListController {
             model.addAttribute("title", "Jobs with " + columnChoices.get(column) + ": " + value);
         }
         model.addAttribute("jobs", jobs);
-
+        System.out.println(jobs.getClass().getFields().toString());
         return "list-jobs";
     }
 }
