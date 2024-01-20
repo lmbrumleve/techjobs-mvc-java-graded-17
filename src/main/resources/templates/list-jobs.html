@@ -12,27 +12,27 @@
   <!-- TODO #1 - Use a loop to display job results in a table. -->
 <table class="job-listing" th:each = "job : ${jobs}">
   <tr>
-    <td >ID</td>
+    <td class="text-uppercase" >ID</td>
     <td th:text = "${job.getId()}">a table value goes here</td>
   </tr>
   <tr>
-    <td>Name</td>
+    <td class="text-uppercase">Name</td>
     <td th:text = "${job.getName()}">next value here</td>
   </tr>
   <tr>
-    <td>Employer</td>
+    <td class="text-uppercase" >Employer</td>
     <td th:text = "${job.getEmployer()}">next value here</td>
   </tr>
   <tr>
-    <td>Location</td>
+    <td class="text-uppercase">Location</td>
     <td th:text = "${job.getLocation()}">next value here</td>
   </tr>
   <tr>
-    <td>Position Type</td>
+    <td class="text-uppercase">Position Type</td>
     <td th:text = "${job.getPositionType()}">next value here</td>
   </tr>
   <tr>
-    <td>Skill</td>
+    <td class="text-uppercase">Skill</td>
     <td th:text = "${job.getCoreCompetency()}">next value here</td>
   </tr>
 </table>
